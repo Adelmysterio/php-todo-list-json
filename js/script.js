@@ -4,23 +4,19 @@ createApp({
   data() {
     return {
       todoList: '',
-      content: 'madonna',
+      content: '',
     }
   },
   methods: {
     getData() {
-      axios.get('./db/todoList.json', {
-      })
+      axios.get('./db/todoList.json')
         .then((response) => {
           console.log(response.data);
           this.todoList = response.data
           console.log(this.todoList)
         })
-        .catch(function (error) {
+        .catch((error) => {
           console.log(error);
-        })
-        .finally(function () {
-          // always executed
         });
     },
   },
