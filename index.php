@@ -20,13 +20,13 @@
             <h1>To do List</h1>
             <section class="list-area">
                 <ul>
-                    <li>
+                    <li v-for="item in todoList">
 
                     </li>
                 </ul>
                 <form class="input-area">
                     <label for="task">Inserisci una nuova Task</label>
-                    <input type="text" id="task" v-model="todo">
+                    <input type="text" id="task" v-model="content">
                     <button type="submit">Aggiungi</button>
                 </form>
             </section>
@@ -34,7 +34,8 @@
     </div>
     <!-- Scripts -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
-    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
